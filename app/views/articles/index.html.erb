@@ -1,0 +1,13 @@
+<h1>Articles - index</h1>
+
+<%= link_to "Write an article", new_article_path %>
+
+<ul>
+  <% @articles.reverse.each do |article| %>
+    <li>
+      <h3><%= link_to article.title.capitalize, article_path(article) %></h3>
+      <p><%= article.content %></p>
+      <p>------------------------------------------------------------------</p>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,4 @@
+<h1><%= @article.title.capitalize %></h1>
+<p><%= link_to "Edit this article", edit_article_path %></p>
+<p><%= link_to "Delete this article", article_path, method: :delete %></p>
+<h3><%= @article.content %></h3>
